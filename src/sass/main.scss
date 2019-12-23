@@ -1,4 +1,26 @@
-$bg: yellow;
-body{
-    background-color: $bg;
+@import "./base";
+@import "./_partials/btn";
+
+$bg: #ccc;
+
+.banner {
+    $bg: yellow;
+    background: $bg;
+    padding: 50px;
+    margin-bottom: 25px;
+
+    &__btn {  
+        @include btn;
+        // @extend %botao;
+        background-color: orange;       
+
+        body & { font-size: 1.5em;}
+
+        &--danger{
+            @include btn(darken(red, 15%), larger);
+            // @extend .banner__btn;
+            background-color: red;
+        }
+    }
 }
+

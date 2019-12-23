@@ -1,0 +1,36 @@
+body{
+    background-color: #eee;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+$base-color: #036;
+// @for $i from 1 through 10 {
+    // .li-#{$i}{
+    //     // z-index: $i * 10;
+    //     background: lighten($base-color, 5% * $i);
+    // }
+// }
+// $i: 1;
+// @while $i <= 10 {
+//     .li-#{$i}{
+//         // z-index: $i * 10;
+//         background: lighten($base-color, 5% * $i);
+//     }
+//     $i: $i + 1;
+// }
+
+$sizes: 40, 50, 60;
+
+@each $size in $sizes{
+    .icon-#{$size} {
+        font-size: $size + px;
+    }
+}
+
+$icons: ("eye": "12px", "start": "14px", "like": "16px");
+@each $prop, $value in $icons {
+    .icon-#{$prop} {
+        font-size: $value;
+    }
+}

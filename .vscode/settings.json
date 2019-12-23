@@ -1,8 +1,8 @@
 {
-    "window.zoomLevel": 0,
-    "editor.fontSize": 18,
+    "window.zoomLevel": 1,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "files.watcherExclude": {
         "**/*.scss": true
-    }
+    },
+    "editor.fontSize": 15
 }

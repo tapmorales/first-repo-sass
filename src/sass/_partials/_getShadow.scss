@@ -1,0 +1,21 @@
+@function getShadow($cor, $steps){
+    $ret: ();
+    @for $i from 1 through $steps {
+        // $ret: append($ret, #{ $i $i $cor "," });
+        $teste: 0;
+        @if $i > 0 {
+            $teste: 1 - $i / $steps;
+        }
+        $ret: append($ret, #{$i}px #{$i}px );
+        $ret: append($ret, rgba($cor, $teste ));
+        @if($i < $steps) {
+            $ret: append($ret, #{","})
+        }
+        
+    }
+    @return $ret;
+}
+
+h1{
+    text-shadow: getShadow(red, 10)
+}

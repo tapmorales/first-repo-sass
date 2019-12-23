@@ -1,0 +1,36 @@
+@function  getBorder($rad: 15px){
+    @return $rad - 30px;
+}
+
+@mixin btn($cor: black, $size: small) {
+    background-color: aqua;
+    border: none;
+    margin: 15px;
+    padding: 15px;
+    @if $size == larger {
+        font-size: 44px;
+    } 
+    @else {
+        font-size: 14px;
+    }
+    
+    transition: all .5s;
+    border-radius: getBorder(50px);
+    &:hover{
+        background-color: $cor;
+        color: white;
+    }
+}
+%botao {
+    background-color: aqua;
+    border: none;
+    margin: 15px;
+    padding: 15px;
+    font-size: 14px;
+    transition: all .5s;
+
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
