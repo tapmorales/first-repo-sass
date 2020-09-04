@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/tapmorales/first-repo-sass#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
